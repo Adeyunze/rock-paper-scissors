@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>rock-paper</title>
+</head>
+
+<body>
+    <section>
+        <div class="score-container">
+            <img src="/images/logo.svg" alt="logo">
+            <div class="score-box">
+                <p>Score</p>
+                <h1 id="score">12</h1>
+            </div>
+        </div>
+        <div class="rps-container">
+            <img class="bg-triangle" src="/images/bg-triangle.svg" alt="bg-triangle">
+            <div class="rps-items paper">
+                <img class="rps-img" src="/images/icon-paper.svg" alt="paper">
+            </div>
+            <div class="rps-items scissors">
+                <img class="rps-img" src="/images/icon-scissors.svg" alt="scissors">
+            </div>
+            <div class="rps-items rock">
+                <img class="rps-img" src="/images/icon-rock.svg" alt="rock">
+            </div>
+        </div>
+    </section>
+    <div class="modal">
+        <div class="modal-rules">
+            <div class="top">
+                <h1>Rules</h1>
+                <img class="close" src="/images/icon-close.svg" alt="close">
+            </div>
+            <div class="rules-img">
+                <img src="/images/image-rules.svg" alt="rules">
+            </div>
+        </div>
+    </div>
+    <button class="rules">Rules</button>
+    <script src="app.js"></script>
+    <script src="modal.js"></script>
+</body>
+
+</html>

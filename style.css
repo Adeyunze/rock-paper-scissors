@@ -1,0 +1,255 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+}
+
+body {
+    color: white;
+    background-image: radial-gradient( hsl(214, 47%, 23%), hsl(237, 49%, 15%));
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+section {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+/*
+=============
+SCORE SECTION
+=============
+*/
+
+.score-container {
+    border: 2px solid hsl(217, 16%, 45%);
+    width: 500px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    border-radius: 10px;
+}
+
+.score-container img {
+    width: 120px;
+}
+
+.score-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: white;
+    width: 100px;
+    height: 80px;
+    padding: 20px 0px;
+    border-radius: 5px;
+}
+
+.score-box p {
+    color: hsl(229, 64%, 46%);
+    text-transform: uppercase;
+    font-size: 10px;
+    letter-spacing: 2px;
+}
+
+.score-box h1 {
+    color: hsl(229, 25%, 31%);
+    font-size: 28px;
+}
+
+.paper,
+.rock,
+.scissors {
+    background-color: hsl(217, 87%, 97%);
+    width: 230px;
+    height: 230px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.5s ease-in-out;
+}
+
+.paper:hover,
+.rock:hover,
+.scissors:hover {
+    transform: scale(1.09) translateY(-5px);
+}
+
+.rps-img {
+    width: 100px;
+}
+
+.paper {
+    border: 20px solid hsl(230, 89%, 62%);
+    top: 50px;
+    right: 100px;
+}
+
+.rock {
+    border: 20px solid hsl(349, 71%, 52%);
+    top: -150px;
+    left: 30px;
+}
+
+.scissors {
+    border: 20px solid hsl(39, 89%, 49%);
+    top: -175px;
+    left: 190px;
+}
+
+.rps-container {
+    width: 30rem;
+    /* margin-top: ; */
+}
+
+.bg-triangle {
+    position: absolute;
+    /* margin-top: 100px; */
+    /* width: 400px; */
+    left: 50%;
+    top: 30%;
+    transform: translateX(-50%);
+    width: 400px;
+    transition: all 0.5s ease-in-out;
+}
+
+
+/* 
+==========
+Modal
+==========
+*/
+
+.modal-rules {
+    background-color: white;
+    color: hsl(229, 25%, 31%);
+    width: 400px;
+    padding: 20px 40px;
+    border-radius: 10px;
+    height: 400px;
+}
+
+.top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.rules-img {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    padding-bottom: 30px;
+}
+
+.rules-img img {
+    width: 300px;
+}
+
+.close {
+    cursor: pointer;
+}
+
+.modal {
+    background: rgba(20, 21, 57, 0.377);
+    width: 100%;
+    position: fixed;
+    top: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+    visibility: hidden;
+    clip-path: circle(0% at 50% 50%);
+}
+
+.rules {
+    position: absolute;
+    bottom: 30px;
+    right: 30px;
+    background: none;
+    border: 1px solid white;
+    color: white;
+    padding: 10px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    pointer-events: all;
+}
+
+.rules.active {
+    pointer-events: none;
+}
+
+.modal.active {
+    visibility: visible;
+    clip-path: circle(100% at 50% 50%);
+}
+
+.chosen-el {
+    margin-top: 100px;
+}
+
+.game-board {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    margin-top: 150px;
+}
+
+.play-btn {
+    cursor: pointer;
+    border: none;
+    padding: 10px 20px;
+    /* font-size: 16px; */
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-radius: 5px;
+    transition: all 0.25s ease-in-out;
+}
+
+.play-btn:hover {
+    color: hsl(349, 71%, 52%);
+}
+
+.btn-cont {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-cont h1 {
+    font-size: 30px;
+    font-weight: 600;
+    padding-bottom: 30px;
+}
+
+.you {
+    position: absolute;
+    top: 200px;
+    text-transform: uppercase;
+    font-size: 20px;
+    font-weight: 600;
+    padding-bottom: 30px;
+    letter-spacing: 2px;
+    /* z-index: 0; */
+}
