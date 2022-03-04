@@ -40,6 +40,9 @@ SCORE SECTION
     border-radius: 10px;
 }
 
+
+/*  */
+
 .score-container img {
     width: 120px;
 }
@@ -235,6 +238,7 @@ Modal
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    text-align: center;
 }
 
 .btn-cont h1 {
@@ -252,4 +256,93 @@ Modal
     padding-bottom: 30px;
     letter-spacing: 2px;
     /* z-index: 0; */
+}
+
+.game-board {
+    width: 50%;
+}
+
+@media (max-width:1000px) {
+    .game-board {
+        width: 80%;
+    }
+}
+
+@media (max-width:745px) {
+    .btn-cont {
+        position: absolute;
+        bottom: 150px;
+        width: 100%;
+        /* right: 50%; */
+        left: 0;
+    }
+    .play-btn {
+        padding: 20px 30px;
+        width: 50%;
+    }
+}
+
+@media (max-width:600px) {
+    .score-container {
+        width: 320px;
+        margin: 20px 50px;
+    }
+    .score-container img {
+        width: 100px;
+    }
+    .rps-img {
+        width: 50px;
+    }
+    .paper,
+    .rock,
+    .scissors {
+        width: 150px;
+        height: 150px;
+    }
+    .bg-triangle {
+        width: 250px;
+    }
+    .paper {
+        right: 30px;
+        top: 20px;
+    }
+    .scissors {
+        top: -130px;
+        left: 180px;
+    }
+    .rock {
+        top: -100px;
+        left: 70px;
+    }
+    .btn-cont {
+        position: absolute;
+        bottom: 150px;
+        width: 100%;
+        /* right: 50%; */
+        left: 0;
+    }
+    .game-board {
+        width: 100%;
+        margin-top: 50px;
+        padding: 0px 15px;
+    }
+    .play-btn {
+        padding: 20px 30px;
+        width: 80%;
+    }
+    .you {
+        top: unset;
+        bottom: 350px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width:600px) {
+    .modal-rules {
+        width: 350px;
+        height: 350px;
+    }
+    .rules-img img {
+        width: 250px;
+    }
 }
