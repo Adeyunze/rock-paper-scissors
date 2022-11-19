@@ -345,4 +345,7 @@ Modal
     .rules-img img {
         width: 250px;
     }
+    .you {
+        display: none;
+    }
 }
