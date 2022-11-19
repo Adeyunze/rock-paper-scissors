@@ -17,7 +17,7 @@ let output;
 let score = 12;
 
 const choices = ['rock', 'paper', 'scissors'];
-const random = Math.floor(Math.random() * choices.length);
+let random = Math.floor(Math.random() * choices.length);;
 
 
 const PlayerPick = () => {
@@ -128,7 +128,7 @@ playBtn.addEventListener('click', () => {
     btnCont.remove()
     comp.remove()
     rpsContainer.classList.remove("game-board");
-
+    random = Math.floor(Math.random() * choices.length);
     rpsItem.forEach(item => {
         item.classList.remove("chosen-el")
         h1.remove()
@@ -136,12 +136,9 @@ playBtn.addEventListener('click', () => {
         item.style.position = null
         item.style.pointerEvents = null;
         item.style.marginTop = null
-            // item.style.top = 0;
-            // item.style.left = 0;
     });
     rpsContainer.appendChild(triangle);
     rpsContainer.appendChild(paper);
     rpsContainer.appendChild(scissors);
     rpsContainer.appendChild(rock);
-
 })
